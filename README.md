@@ -20,7 +20,7 @@ stringToJSON(
 ```
 
 Instead now its
-```
+```c++
 auto json =
 std::make_tuple("filename", "permissions") 
 | pipe([](const char* filename, const char* permissions){ return openFile(filename, permissions); })
