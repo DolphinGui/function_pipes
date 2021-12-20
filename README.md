@@ -41,9 +41,9 @@ int main(){
 }
 ```
 
-The syntax is [parameters] | mtx::pipe([lambda]). If there are
-multiple parameters, use std::tuple to combine them and the library
-will deal with std::apply for you.
+The syntax is `[parameters] | mtx::pipe([lambda])`. If there are
+multiple parameters, use `std::tuple` to combine them and the library
+will deal with `std::apply` for you.
 
 ```c++
 int main(){
