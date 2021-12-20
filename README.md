@@ -10,9 +10,9 @@ auto json =
 stringToJSON(
   read(
     openFile(
-      "filename", 
+      "filename",
       "permissions"
-    ), 
+    ),
     5,
     123
   )
@@ -22,8 +22,7 @@ stringToJSON(
 Instead now its
 ```c++
 auto json =
-std::make_tuple("filename", "permissions") 
-| pipe([](const char* filename, const char* permissions){ return openFile(filename, permissions); })
+openFile("filename", "permissions")
 | pipe([](FILE* file){ return read(file, 5, 123); });
 | pipe([](std::string string){ return stringToJSON(string); });
 ```
@@ -43,7 +42,8 @@ int main(){
 
 The syntax is `[parameters] | mtx::pipe([lambda])`. If there are
 multiple parameters, use `std::tuple` to combine them and the library
-will deal with `std::apply` for you.
+will deal with `std::apply` for you. Other parameters for other functions
+should be captured and stored within the lambda
 
 ```c++
 int main(){
