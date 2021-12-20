@@ -23,7 +23,7 @@ Instead now its
 ```c++
 auto json =
 openFile("filename", "permissions")
-| pipe([](FILE* file){ return read(file, 5, 123); });
+| pipe([](FILE* file){ return read(file, 5, 123); })
 | pipe([](std::string string){ return stringToJSON(string); });
 ```
 
