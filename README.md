@@ -64,3 +64,6 @@ lambdas, so it's the same as using lambdas on the stack.
 
 Clone this git repo into your project, and include this in your cmake `include_directories`. I'll figure
 out conan and vcpkg packaging later.
+
+## Dependencies
+It uses `<tuple>` and `<utility>` from libstdc++ for c++17.
