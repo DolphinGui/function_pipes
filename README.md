@@ -62,8 +62,8 @@ lambdas, so it's the same as using lambdas on the stack.
 
 ## How to install
 
-Clone this git repo into your project, and include this in your cmake `include_directories`. I'll figure
-out conan and vcpkg packaging later.
+Clone this git repo into your project, and include this in your cmake `include_directories`. Use
+`conan install .` to install locally.
 
 ## Dependencies
 It uses `<tuple>` and `<utility>` from libstdc++ for c++17.
