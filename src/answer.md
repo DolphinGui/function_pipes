@@ -11,4 +11,6 @@ the `operator |` does.
 Capture by value might copy large objects, creating unnecessary overhead
 and increasing memory footprint, as well as preventing move-only captures
 such as unique_ptr. If preventing the dangling reference is really necessary,
-`operator &`, a function-composition-only operator, captures by value rather than reference.
+`operator &`, a function-composition-only operator, captures by value rather
+than reference. `operator ^` captures by move if the lambda contains uncopiable
+objects.

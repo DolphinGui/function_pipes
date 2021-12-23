@@ -53,7 +53,7 @@ int main(){
 }
 ```
 
-You can even compose functions using `|` or `&`. See example 2 for the differences between the two.
+You can even compose functions using `|`, `&`, or `^`. See example 2 for the differences between the two.
 
 ## Performance considerations
 

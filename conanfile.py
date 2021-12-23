@@ -3,7 +3,7 @@ import os
 
 class function_pipes(ConanFile):
     name = "function_pipes"
-    version = "1.0.0"
+    version = "1.1.0"
     url = "https://github.com/dolphingui/function_pipes"
     description = "A header-only library for composing functions in c++17"
     license = "Unlicense"
