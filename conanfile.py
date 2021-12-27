@@ -1,5 +1,5 @@
-from conans import ConanFile
 import os
+from conans import ConanFile, tools
 
 class function_pipes(ConanFile):
     name = "function_pipes"
@@ -7,16 +7,13 @@ class function_pipes(ConanFile):
     url = "https://github.com/dolphingui/function_pipes"
     description = "A header-only library for composing functions in c++17"
     license = "Unlicense"
-    # No settings/options are necessary, this is header only
+    topics = ("conan", "function_pipes")
     exports_sources = "include/*"
     no_copy_source = True
+    # No settings/options are necessary, this is header only
 
     def package(self):
-        self.copy("*.hpp", dst="include", src="public")
+        self.copy("*.hpp")
 
     def package_id(self):
         self.info.header_only()
-
-    def package_info(self):
-        self.cpp_info.names["cmake_find_package"] = "function_pipes"
-        self.cpp_info.names["cmake_find_package_multi"] = "function_pipes"
