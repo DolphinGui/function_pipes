@@ -53,8 +53,6 @@ int main(){
 }
 ```
 
-You can even compose functions using `|`, `&`, or `^`. See example 2 for the differences between the two.
-
 ## Performance considerations
 
 None. At least on -O1 for gcc and clang on godbolt, it seems to inline perfectly. Internally it uses
